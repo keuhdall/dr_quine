@@ -12,8 +12,8 @@ func main() {
 	if (i <= 0) {
 		os.Exit(0)
 	}
-	cmd1 := exec.Command("mkdir", fmt.Sprintf("Sully_%d", i-1))
-	cmd1.Run()
+	mkdirCmd := exec.Command("mkdir", fmt.Sprintf("Sully_%d", i-1))
+	mkdirCmd.Run()
 	f,err := os.Create(fmt.Sprintf("./Sully_%d/Sully_%d.go", i-1, i-1))
 	if (err != nil) {
 		panic(err)
@@ -33,8 +33,8 @@ func main() {
 	if (i <= 0) {
 		os.Exit(0)
 	}
-	cmd1 := exec.Command("mkdir", fmt.Sprintf("Sully_%%d", i-1))
-	cmd1.Run()
+	mkdirCmd := exec.Command("mkdir", fmt.Sprintf("Sully_%%d", i-1))
+	mkdirCmd.Run()
 	f,err := os.Create(fmt.Sprintf("./Sully_%%d/Sully_%%d.go", i-1, i-1))
 	if (err != nil) {
 		panic(err)
@@ -43,11 +43,11 @@ func main() {
 	s := %s
 	fmt.Fprintf(w, s, i-1, "%c"+s+"%c", 96, 96, 10)
 	w.Flush()
-	cmd2 := exec.Command("go", "run", fmt.Sprintf("Sully_%%d/Sully_%%d.go", i-1, i-1))
-	cmd2.Run()
+	runCmd := exec.Command("go", "run", fmt.Sprintf("Sully_%%d/Sully_%%d.go", i-1, i-1))
+	runCmd.Run()
 }%c`
 	fmt.Fprintf(w, s, i-1, "`"+s+"`", 96, 96, 10)
 	w.Flush()
-	cmd2 := exec.Command("go", "run", fmt.Sprintf("Sully_%d/Sully_%d.go", i-1, i-1))
-	cmd2.Run()
+	runCmd := exec.Command("go", "run", fmt.Sprintf("Sully_%d/Sully_%d.go", i-1, i-1))
+	runCmd.Run()
 }
