@@ -7,7 +7,7 @@ import(
 )
 
 /*
- a
+ Just a random comment wandering in this Quine
 */
 
 func main() {
@@ -25,7 +25,7 @@ import(
 )
 
 /*
- a
+ Just a random comment wandering in this Quine
 */
 
 func main() {
