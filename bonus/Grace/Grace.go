@@ -6,8 +6,12 @@ import(
 	"bufio"
 )
 
+/*
+ a
+*/
+
 func main() {
-	f,err := os.Create("Grace_child.go")
+	f,err := os.Create("Grace_kid.go")
 	if (err != nil) {
 		panic(err)
 	}
@@ -20,8 +24,12 @@ import(
 	"bufio"
 )
 
+/*
+ a
+*/
+
 func main() {
-	f,err := os.Create("Grace_child.go")
+	f,err := os.Create("Grace_kid.go")
 	if (err != nil) {
 		panic(err)
 	}
